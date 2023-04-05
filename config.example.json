@@ -1,0 +1,13 @@
+{
+    "web": {
+        "port": "800" ,  
+        "name": "Rice Hosting"
+    },
+    "database": {
+        "url": "database url"
+    },
+    "user": {
+        "owner": "01",
+        "register": "true"
+    }
+}
