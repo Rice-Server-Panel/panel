@@ -5,8 +5,11 @@ console.log("|     Rice Panel     |")
 console.log("|     by Jozo_85     |")
 console.log("----------------------")
 
+const update = require("./utils/updateCheck");
 var path = require('path');
 const mongoose = require('mongoose');
+
+
 
 mongoose.connect(config.database.url, {
 
@@ -31,8 +34,15 @@ app.get('/panel/login', function(req, res) {
     res.render('pages/panel/login', {name: config.web.name});
 })
 
+app.get('/panel/register', function(req, res) {
+    res.render('pages/panel/register', {name: config.web.name, canRegister: config.users.register});
+})
+
+
+update.checkUpdate()
 
 
 app.listen(config.web.port, () => {
     console.log(`[LOG] Server listening on port ${config.web.port}`);
 });
+
