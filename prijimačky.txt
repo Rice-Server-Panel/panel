@@ -11,3 +11,11 @@ Celkem: 6
 7.1     IDK ✖
 7.2     IDK ✖
 Celkem: 0
+
+14.1    E ✔
+Celkem: 2
+
+15.1
+15.2
+15.3
+Celkem:

@@ -5,6 +5,7 @@ const users = new mongoose.Schema({
     email: { type: String, require: true, unique: true},
     password: { type: String, require: true},
     id: { type: String, require: true},
+    coin: { type: Number},
     servers: { type: Array},
     isVerified: { type: Boolean},
     verifyCode: { type: String},

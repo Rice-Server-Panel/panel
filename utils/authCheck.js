@@ -16,10 +16,19 @@ function checkAuth(req, res, next) {
       return next()
     }
   
-    res.redirect("/login")
+    res.redirect("/panel/login")
+}
+
+function checkNotAuth(req, res, next) {
+    if (req.isAuthenticated()) {
+      return res.redirect("/panel/login")
+    }
+    next()
+
 }
 
 
 module.exports.checkAuth = checkAuth
+module.exports.checkNotAuth = checkNotAuth
 module.exports.checkVerify = checkVerify
 
